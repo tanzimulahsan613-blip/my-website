@@ -1,0 +1,64 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+<title>ULTRA PRO MAX V4</title>
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+<div class="container">
+
+<h1>🎓 ULTRA PRO MAX STUDENT PORTAL V4</h1>
+<!-- LOGIN -->
+<div class="card" id="loginBox">
+<h2>Login</h2>
+<input type="text" id="loginUser" placeholder="Username">
+<input type="password" id="loginPass" placeholder="Password">
+<button onclick="login()">Login</button>
+<p onclick="showSignup()">New Student? Sign Up</p>
+</div>
+
+<!-- SIGNUP -->
+<div class="card hidden" id="signupBox">
+<h2>Signup</h2>
+<input type="text" id="signName" placeholder="Full Name">
+<input type="text" id="signUser" placeholder="Username">
+<input type="password" id="signPass" placeholder="Password">
+<button onclick="signup()">Create Account</button>
+<p onclick="showLogin()">Back to Login</p>
+</div>
+
+<!-- STUDENT DASHBOARD -->
+<div class="dashboard hidden" id="studentDash">
+<h2>Welcome <span id="studentDisplay"></span></h2>
+
+<button onclick="section('profile')">Profile</button>
+<button onclick="section('class')">Class</button>
+<button onclick="section('live')">Live Class</button>
+<button onclick="section('attendance')">Attendance</button>
+<button onclick="section('notice')">Notice</button>
+<button onclick="section('exam')">Exam</button>
+<button onclick="section('result')">Result</button>
+<button onclick="logout()">Logout</button>
+
+<div id="studentContent"></div>
+</div>
+
+<!-- ADMIN DASHBOARD -->
+<div class="dashboard hidden" id="adminDash">
+<h2>👑 Admin Panel</h2>
+
+<button onclick="viewStudents()">All Students</button>
+<button onclick="classManager()">Manage Classes</button>
+<button onclick="liveManager()">Manage Live Class</button>
+<button onclick="examManager()">Manage Exam</button>
+<button onclick="noticeManager()">Manage Notice</button>
+<button onclick="viewAttendance()">View Attendance</button>
+<button onclick="resetSystem()">Reset System</button>
+<button onclick="logout()">Logout</button>
+
+<div id="adminContent"></div>
+</div>
+</div>
+<script src="script.js"></script>
+</body>
+</html>
